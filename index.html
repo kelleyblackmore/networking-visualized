@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>15 Must-Know Networking Concepts — visualized</title>
+<meta name="description" content="Fifteen interactive networking visualizations: DNS, NAT, DHCP, TCP vs UDP, TLS, subnetting and more. Click, drag and toggle to watch each one actually happen.">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="15 Must-Know Networking Concepts — visualized">
+<meta property="og:description" content="Everything a request touches between your keyboard and the server — as fifteen things you can poke at.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23120f2e'/><circle cx='9' cy='16' r='3' fill='%236ee7b7'/><circle cx='23' cy='9' r='3' fill='%2367e8f9'/><circle cx='23' cy='23' r='3' fill='%23a78bfa'/><path d='M11.5 15 20.5 10M11.5 17 20.5 22' stroke='%232e2867' stroke-width='1.6'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">networking · reference</p>
+    <h1>15 Must-Know <mark>Networking</mark> Concepts</h1>
+    <p class="sub">Everything a request touches between your keyboard and the server — as fifteen things you can actually poke at. Click a device, drag a prefix, drop some packets, flip the lock.</p>
+
+    <section class="tracer" id="tracer" aria-label="one request, end to end">
+      <div class="tracer-head">
+        <h2>One request, end to end</h2>
+        <span class="t-sub">elapsed <b data-total>0 ms</b></span>
+        <button class="btn btn-primary c-violet" data-run type="button">Run a request</button>
+      </div>
+      <div data-stage></div>
+      <p class="readout"></p>
+    </section>
+
+    <p class="hint">Every card below is <b>interactive</b> — nothing animates until you ask it to.</p>
+  </header>
+
+  <nav class="jump" id="jump" aria-label="jump to a concept"></nav>
+
+  <main class="grid" id="grid"></main>
+
+  <noscript>
+    <p style="margin-top:32px;font-family:var(--mono);color:var(--ink-dim)">
+      These visualizations are built and driven in the browser, so they need JavaScript enabled.
+    </p>
+  </noscript>
+
+  <footer>
+    <span>Built with plain HTML, CSS and ES modules. No frameworks, no build step, no trackers.</span>
+    <span>© <span id="year"></span> · <a href="https://github.com/kelleyblackmore/networking-visualized">source on GitHub</a></span>
+  </footer>
+
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
